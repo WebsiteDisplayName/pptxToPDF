@@ -39,6 +39,8 @@ for subdir, dirs, files in os.walk(pptxFolder):
             # pptxFilePath = os.path.join(pptxFolder, i)
             pptxFilePath = pptxFolder + "/" + i
             pptxFilePath = pptxFilePath.replace("/", "\\")
+            # https://stackoverflow.com/questions/55227428/opening-a-powerpoint-presentation-saving-as-pdf-and-closing-the-application-usi
+            # must use two backslashes as separation
             print(pptxFilePath)
             PPTtoPDF(pptxFilePath, pptxFilePath)
 
