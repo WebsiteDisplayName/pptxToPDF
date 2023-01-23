@@ -44,6 +44,7 @@ for subdir, dirs, files in os.walk(pptxFolder):
             print(pptxFilePath)
             PPTtoPDF(pptxFilePath, pptxFilePath)
 
+for subdir, dirs, files in os.walk(pptxFolder):
     for i in files:
         if i.endswith(".pdf"):
             os.rename(os.path.join(pptxFolder, i), os.path.join(
